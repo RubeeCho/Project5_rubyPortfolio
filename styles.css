@@ -1,0 +1,266 @@
+:root {
+    --yellow: #FFD166;
+    --black: #1A1A1A;
+    --white: #FFFDF2;
+}
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: "Helvetica";
+    background-color: var(--white);
+}
+
+#intro {
+    padding-top: 62px;
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    height: 30vh;
+    color: var(--black);
+}
+
+/*navigation*/
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+#nav-bar ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 15px;
+    background-color: var(--yellow);
+}
+#nav-bar a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+}
+
+/*section*/
+#intro-deco {
+   width: 100%;
+   height: 60vh;
+}
+
+/*about me*/
+@media screen and (max-width: 600px) {
+    #about-me {
+    width: 100%;
+    height: 130vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px; 
+    grid-template-rows: 60px 1fr 20px 0.5fr 20px;
+    overflow: hidden;
+    color: var(--black);
+    gap: 0;
+    border: 1px solid red;
+    }
+    #about-me .title {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        justify-self: center;
+        align-self: center;
+        font-size: 25px;
+        border: 1px solid red;
+    
+    }
+    #about-me .text {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        font-size: 20px;
+        line-height: 34px;
+        border: 1px solid red;
+    }
+    #about-me .image {
+        width: 250px;
+        height: 100%;
+        grid-column: 2/3;
+        grid-row: 4/5;
+        justify-self: center;
+        align-self: center;
+    }
+    #about-me .hexagon {
+        border: 10px solid var(--yellow);
+        border-left: transparent;
+        border-right: transparent;
+        height: 280px;
+        width: 161px;
+        grid-column: 2/3;
+        grid-row: 4/5;
+        justify-self: center;
+    }
+
+}
+
+
+@media screen and (min-width: 600px) {
+#about-me {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 0.5fr 100px;
+    grid-template-rows: repeat(5, 1fr);
+    overflow: hidden;
+    color: var(--black);
+    gap: 0;
+    border: 1px solid red;
+}
+#about-me .title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: center;
+    font-size: 25px;
+    border: 1px solid red;
+
+}
+#about-me .text {
+    grid-column: 2/3;
+    grid-row: 2/5;
+    font-size: 20px;
+    line-height: 34px;
+    border: 1px solid red;
+}
+#about-me .image {
+
+    width: 250px;
+    height: 100%;
+    grid-column: 4/5;
+    grid-row: 2/4;
+    justify-self: center;
+    align-self: center;
+}
+#about-me .hexagon {
+    border: 10px solid var(--yellow);
+    border-left: transparent;
+    border-right: transparent;
+    height: 280px;
+    width: 161px;
+    grid-column: 4/5;
+    grid-row: 2/4;
+    justify-self: center;
+}
+}
+#about-me img {
+    width: 100%;
+    height: 100%;
+}
+#about-me .lines-two {
+    transform: rotate(60deg);
+}
+#about-me .lines-three {
+    transform: rotate(120deg);
+}
+
+/*latest project*/
+#latest-project {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 70px 30px 1fr 30px 70px;
+    grid-template-rows: 100px minmax(10px, 1fr) 80px;
+    color: var(--black);
+    
+}
+#latest-project .frame {
+    width: 100%;
+    border: 18px solid var(--yellow);
+    height: 100%;
+    z-index: -1; 
+}
+#latest-project .frame-top {
+    grid-column: 2/5;
+    grid-row: 1/2;
+    border-right: transparent;
+    border-left: transparent;
+    border-top: transparent;
+}
+#latest-project .screen{
+    grid-area: 2/3/3/4;
+    height: 100%;
+    width: 100%;
+    border: 12px solid var(--yellow);
+    border-top: transparent;
+    border-bottom: 18px solid var(--yellow);
+    display: grid;
+    overflow: hidden;
+}
+#latest-project iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+    grid-area: 1/1/1/1;
+}
+#latest-project .project-description {
+    grid-area: 1/1/1/1;
+
+    background-color: var(--white);
+    visibility: hidden;
+    padding: 8vh;
+    line-height: 3.1vw;
+    opacity: 0.87;
+}
+#latest-project .screen:hover .project-description {
+    visibility: visible;
+}
+* #latest-project .project-description{
+    color: 	var(--black);
+    font-size: 2.0vw;
+}
+#latest-project h3 {
+    text-align: center;
+}
+#latest-project h2 {
+    grid-area: 1/3/2/4;
+    place-self: center;
+}
+
+/**/
+footer {
+    width: 100%;
+    height: 12vh;
+    background-color: var(--yellow); 
+}
+footer ul {
+    height: 100%;
+    width: 100%;
+    display: flex;  
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+footer a {
+    text-decoration: none;
+    color: var(--black);
+}
+footer li {
+    padding-left: 20px;
+}
+
+footer li[class="socials"] {
+    font-size: 25px;
+}
+footer input {
+    color: var(--yellow);
+    border-radius: 5px;
+    background-color: var(--black);
+    width: 80px;
+    height: 20px;
+    border: none;
+}
+
+
+
+
+

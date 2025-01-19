@@ -1,0 +1,1 @@
+This is my personal portfolio website. I will be posting the projects I complete in the future. It is developed in only css and html. I used everything I have learned so far to program this. I may or may not change the layout in the future. I am not entirely satisfied with it.
