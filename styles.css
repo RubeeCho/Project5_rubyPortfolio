@@ -62,7 +62,6 @@ body {
     overflow: hidden;
     color: var(--black);
     gap: 0;
-    border: 1px solid red;
     }
     #about-me .title {
         grid-column: 2/3;
@@ -70,7 +69,6 @@ body {
         justify-self: center;
         align-self: center;
         font-size: 25px;
-        border: 1px solid red;
     
     }
     #about-me .text {
@@ -78,7 +76,6 @@ body {
         grid-row: 2/3;
         font-size: 20px;
         line-height: 34px;
-        border: 1px solid red;
     }
     #about-me .image {
         width: 250px;
@@ -114,7 +111,6 @@ body {
     overflow: hidden;
     color: var(--black);
     gap: 0;
-    border: 1px solid red;
 }
 #about-me .title {
     grid-column: 2/3;
@@ -122,7 +118,6 @@ body {
     justify-self: center;
     align-self: center;
     font-size: 25px;
-    border: 1px solid red;
 
 }
 #about-me .text {
@@ -130,7 +125,6 @@ body {
     grid-row: 2/5;
     font-size: 20px;
     line-height: 34px;
-    border: 1px solid red;
 }
 #about-me .image {
 
